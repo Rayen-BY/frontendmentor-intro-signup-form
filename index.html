@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Intro component with sign up form</title>
+  </head>
+  <body>
+    <main class="container">
+      <section class="left">
+        <h1>Learn to code by watching others</h1>
+        <p>
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </p>
+      </section>
+
+      <section class="right">
+        <div class="offer">
+          <p><strong>Try it free 7 days</strong> then $20/mo. thereafter</p>
+        </div>
+        <form id="signupForm" novalidate>
+          <div class="form-group">
+            <input type="text" id="firstName" placeholder="First Name" />
+            <small class="error"></small>
+          </div>
+          <div class="form-group">
+            <input type="text" id="lastName" placeholder="Last Name" />
+            <small class="error"></small>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" placeholder="Email Address" />
+            <small class="error"></small>
+          </div>
+          <div class="form-group">
+            <input type="password" id="password" placeholder="Password" />
+            <small class="error"></small>
+          </div>
+
+          <button type="submit">Claim your free trial</button>
+          <p class="terms">
+            By clicking the button, you are agreeing to our
+            <strong id="strong2">Terms and Services</strong>
+          </p>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Rayen Ben yahmed</a>.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

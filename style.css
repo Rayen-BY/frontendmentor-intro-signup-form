@@ -1,0 +1,183 @@
+/* Variables de couleurs */
+:root {
+  --red-400: hsl(0, 100%, 74%);
+  --green-400: hsl(154, 59%, 51%);
+  --purple-700: hsl(248, 32%, 49%);
+  --gray-900: hsl(249, 10%, 26%);
+  --purple-350: hsl(246, 25%, 77%);
+  --font: "Poppins", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--red-400);
+  background-image: url(images/bg-intro-desktop.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: var(--font);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  min-height: 100vh;
+  gap: 1rem;
+}
+
+.container {
+  max-width: 1100px;
+  width: 100%;
+  gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+}
+
+/* LEFT SIDE */
+.left {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.left h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.left p {
+  font-size: 1rem;
+  /* margin-top: 1rem; */
+  word-break: normal; /* Permet au texte de se casser seulement aux espaces, jamais au milieu d’un mot. */
+  overflow-wrap: break-word; /* autorise le saut de ligne mais pas la coupure */
+  hyphens: none; /* désactive la césure automatique  (la coupure avec un tiret) */
+}
+
+/* RIGHT SIDE */
+.right {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.offer {
+  background-color: var(--purple-700);
+  border-radius: 10px;
+  text-align: center;
+  padding: 1rem;
+  box-shadow: 0px 8px 8px var(--gray-900); /* box-shadow: décalage-horizontal décalage-vertical flou étalement couleur; */
+}
+
+/* FORM */
+form {
+  background-color: white;
+  border-radius: 10px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+input {
+  border-radius: 5px;
+  border: 1px solid gray;
+  outline: none;
+  font-size: 1rem;
+  padding: 0 0.75rem;
+  height: 2.5rem;
+  width: 100%;
+}
+
+input:focus {
+  border: 2px solid var(--purple-700);
+}
+
+.error {
+  text-align: right;
+  color: var(--red-400);
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  font-style: italic;
+}
+
+/* Error style input */
+input.error {
+  background-image: url("images/icon-error.svg");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 20px 20px;
+  padding-right: 2.5rem;
+  border: 2px solid var(--red-400);
+  text-align: left;
+}
+
+/* BUTTON */
+button {
+  border: none;
+  border-radius: 8px;
+  height: 3rem;
+  width: 100%;
+  background-color: var(--green-400);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  text-transform: uppercase;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.terms {
+  color: var(--purple-350);
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+#strong2 {
+  color: var(--red-400);
+}
+
+/* FOOTER */
+footer {
+  position: relative;
+  text-align: center;
+  margin-top: 2rem;
+  color: white;
+  font-size: 0.8rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .left,
+  .right {
+    text-align: center;
+    align-items: center;
+  }
+
+  form {
+    padding: 1.5rem;
+  }
+}
